@@ -28,6 +28,23 @@ header {
 
     flex-wrap: wrap;
 
+    position: -webkit-sticky;
+
+    position: sticky;
+
+    top: 0;
+
+    background-image: url("../images/hero-bg.jpg");
+    
+    background-size: cover;
+    
+    background-position: center;
+
+    background-attachment: fixed;
+
+    background-position: 80%;
+
+
 }
 
 header h1 {
@@ -39,6 +56,8 @@ header h1 {
     color: #fce138;
 
     margin: 0;
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 
 }
@@ -78,7 +97,16 @@ header nav ul li a {
 
     font-size: 1.5vw;
 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 }
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+  }
 
 footer {
 
@@ -145,6 +173,10 @@ section {
 
     flex-wrap: wrap;
 
+    background-attachment: fixed;
+
+    background-position: 80%;
+
 }
 
 .hero-cta {
@@ -170,6 +202,9 @@ section {
 
     color: #fce138;
 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
   }
 
 /* Hero Style End */
@@ -193,6 +228,12 @@ section {
     width: 40%;
 
     margin: 3.5%;
+
+    box-shadow: 0 0 10px rgba(252, 225, 56, 0.8);
+
+    border-radius: 15px;
+
+
 
 }
 
@@ -226,7 +267,18 @@ section {
 
     margin-bottom: 15px;
 
+    border-radius: 10px;
+
+    background-color: rgba(255,255,255, 0.75);
+
+
 }
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+
+    outline: none;
+  }
 
 .hero-form label {
 
@@ -246,7 +298,13 @@ section {
 
     font-size: 16px;
 
+    border-radius: 10px;
+
 }
+
+.hero-form button:hover {
+    background-color: #39a6b2;  
+  }  
 
 
 .intro p {
@@ -514,6 +572,17 @@ section {
 
     margin-top: 5px;
 
+    border-radius: 10px;
+
+}
+
+.contact-form input, .contact-form textarea {
+    /* add a transparent background here */
+  }
+
+  /* create a new css rule for focus state */
+.contact-form input:focus, .contact-form textarea:focus {
+
 }
 
 .contact-form button {
@@ -531,8 +600,15 @@ section {
     padding: 15px 0;
 
     font-size: 16px;
+
+    border-radius: 10px;
     
 }
+
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
+  }
 
 .contact-info a {
 
@@ -555,8 +631,6 @@ section {
 
     width: 80%;
 
-    border-bottom: 1px solid #39a6b2;
-
     display: flex;
 
     flex-wrap: wrap;
@@ -565,13 +639,21 @@ section {
 
     justify-content: space-between;
 
+    border-bottom: 1px solid #39a6b2;
+
+
   }
+
+  .step:last-child {
+    border-bottom: none;
+}
 
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
   @media screen and (max-width: 980px) {
     header {
       padding-bottom: 0;
       justify-content: center;
+      position: relative;
     }
   
     header h1 {
@@ -688,3 +770,5 @@ section {
       }
     }
   }
+
+  
