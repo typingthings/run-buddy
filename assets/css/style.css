@@ -57,11 +57,18 @@ header nav {
 
 }
 
-header nav ul li {
+header nav ul {
+    display: flex;
 
-display: inline;
+    flex-wrap: wrap;
 
-}
+    justify-content: space-between;
+
+    align-items: center;
+
+    list-style: none;
+
+  }
 
 header nav ul li a {
 
@@ -69,7 +76,7 @@ header nav ul li a {
 
     font-weight: lighter;
 
-    font-size: 22px;
+    font-size: 1.5vw;
 
 }
 
